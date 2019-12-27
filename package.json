@@ -1,6 +1,6 @@
 {
-  "name": "react-native-wheel-picker",
-  "version": "1.2.0",
+  "name": "@gregfrench/react-native-wheel-picker",
+  "version": "1.2.2",
   "description": "React native cross platform picker.",
   "main": "index.js",
   "scripts": {
@@ -8,18 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lesliesam/react-native-wheel-picker.git"
+    "url": "https://github.com/GregFrench/react-native-wheel-picker.git"
   },
   "keywords": [
     "react-native",
     "picker",
 	"wheel"
   ],
-  "author": "Yu Zheng",
-  "license": "ISC",
+  "author": "Greg French",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lesliesam/react-native-wheel-picker/issues"
   },
-  "homepage": "https://github.com/lesliesam/react-native-wheel-picker#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/GregFrench/react-native-wheel-picker#readme",
+  "peerDependencies": {
+    "prop-types": "^15.6.2"
+  }
 }
