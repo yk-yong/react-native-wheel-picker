@@ -35,7 +35,7 @@ import {
 } from 'react-native';
 
 
-import Picker from 'react-native-wheel-picker'
+import Picker from '@gregfrench/react-native-wheel-picker'
 var PickerItem = Picker.Item;
 
 export default class App extends Component<{}> {
