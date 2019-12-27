@@ -17,31 +17,11 @@ Run command
 
 For apps using RN 0.40 or higher, please run
 ```
-npm i react-native-wheel-picker --save
+npm i @gregfrench/react-native-wheel-picker --save
 ```
-For apps using RN 0.39 or less, please run
+To link the project, please run
 ```
-npm install --save --save-exact react-native-wheel-picker@1.1.2
-```
-Add in settings.gradle
-```
-include ':react-native-wheel-picker'
-project(':react-native-wheel-picker').projectDir = new File(settingsDir, '../node_modules/react-native-wheel-picker/android')
-```
-Add in app/build.gradle
-```
-compile project(':react-native-wheel-picker')
-```
-Modify MainApplication
-```
-    import com.zyu.ReactNativeWheelPickerPackage;
-    ......
-
-    protected List<ReactPackage> getPackages() {
-        return Arrays.<ReactPackage>asList(
-            new MainReactPackage(), new ReactNativeWheelPickerPackage()
-        );
-    }
+react-native link @gregfrench/react-native-wheel-picker
 ```
 
 ## Example code
