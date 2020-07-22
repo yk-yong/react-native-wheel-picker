@@ -31,12 +31,7 @@ react-native link @gregfrench/react-native-wheel-picker
 ## Example code (using classes)
 ```
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-} from 'react-native';
-
+import { Text, View } from 'react-native';
 
 import Picker from '@gregfrench/react-native-wheel-picker'
 var PickerItem = Picker.Item;
