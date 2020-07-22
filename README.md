@@ -32,9 +32,9 @@ react-native link @gregfrench/react-native-wheel-picker
 ```
 import React, { Component } from 'react';
 import {
-	StyleSheet,
-	Text,
-	View,
+    StyleSheet,
+    Text,
+    View,
 } from 'react-native';
 
 
@@ -57,37 +57,37 @@ export default class WheelPicker extends Component<{}> {
     });
   }
 
-	onAddItem = () => {
-		var name = '司马懿'
-		if (this.state.itemList.indexOf(name) == -1) {
-			this.state.itemList.push(name)
-		}
-		this.setState({
-			selectedItem: this.state.itemList.indexOf(name),
-		})
-	}
+    onAddItem = () => {
+        var name = '司马懿'
+        if (this.state.itemList.indexOf(name) == -1) {
+            this.state.itemList.push(name)
+        }
+        this.setState({
+            selectedItem: this.state.itemList.indexOf(name),
+        })
+    }
 
   render () {
     return (
-			<View>
-				<Picker style={{width: 150, height: 180}}
-					selectedValue={this.state.selectedItem}
-					itemStyle={{color:"white", fontSize:26}}
-					onValueChange={(index) => this.onPickerSelect(index)}>
-						{this.state.itemList.map((value, i) => (
-							<PickerItem label={value} value={i} key={"money"+value}/>
-						))}
-				</Picker>
-				<Text style={{margin: 20, color: '#ffffff'}}>
-          Selected item: {this.state.itemList[this.state.selectedItem]}
-				</Text>
+      <View>
+        <Picker style={{width: 150, height: 180}}
+          selectedValue={this.state.selectedItem}
+          itemStyle={{color:"white", fontSize:26}}
+          onValueChange={(index) => this.onPickerSelect(index)}>
+            {this.state.itemList.map((value, i) => (
+                <PickerItem label={value} value={i} key={"money"+value}/>
+            ))}
+        </Picker>
 
-				<Text style={{margin: 20, color: '#ffffff'}}
-					onPress={this.onAddItem}>
+        <Text style={{margin: 20, color: '#ffffff'}}>
+          Selected item: {this.state.itemList[this.state.selectedItem]}
+        </Text>
+
+        <Text style={{margin: 20, color: '#ffffff'}} onPress={this.onAddItem}>
           Add item
-				</Text>
-			</View>
-		);
-	}
+        </Text>
+      </View>
+    );
+  }
 }
 ```
