@@ -57,15 +57,17 @@ export default class WheelPicker extends Component<{}> {
     });
   }
 
-    onAddItem = () => {
-        var name = '司马懿'
-        if (this.state.itemList.indexOf(name) == -1) {
-            this.state.itemList.push(name)
-        }
-        this.setState({
-            selectedItem: this.state.itemList.indexOf(name),
-        })
+  onAddItem = () => {
+    var name = 'New item';
+
+    if (this.state.itemList.indexOf(name) == -1) {
+      this.state.itemList.push(name);
     }
+
+    this.setState({
+      selectedItem: this.state.itemList.indexOf(name),
+    });
+  }
 
   render () {
     return (
