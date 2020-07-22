@@ -26,7 +26,34 @@ react-native link @gregfrench/react-native-wheel-picker
 
 ## Example code (using functional components)
 ```
+import React, { useState } from 'react';
+import { View, Text } from 'react-native';
 
+import Picker from 'C:/xampp/htdocs/oss/projects/react-native-wheel-picker'
+var PickerItem = Picker.Item;
+
+const WheelPicker = () => {
+  const [selectedItem, setSelectedItem ] = useState(2);
+  const [itemList , setItemList ] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8']);
+
+  return (
+    <View>
+      <Text style={styles.sectionTitle}>Step One</Text>
+      <Text style={styles.sectionDescription}>
+        <Picker style={{width: 150, height: 180}}
+        selectedValue={selectedItem}
+        itemStyle={{color:"black", fontSize:26}}
+        onValueChange={(index) => setSelectedItem(index) }>
+          {itemList.map((value, i) => (
+            <PickerItem label={value} value={i} key={"money"+value}/>
+          ))}
+      </Picker>
+    </View>
+    </>
+  );
+};
+
+export default WheelPicker;
 ```
 ## Example code (using classes)
 ```
