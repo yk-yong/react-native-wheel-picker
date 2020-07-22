@@ -24,11 +24,14 @@ To link the project, please run
 react-native link @gregfrench/react-native-wheel-picker
 ```
 
-## Example code
+## Example code (using functional components)
+```
+
+```
+## Example code (using classes)
 ```
 import React, { Component } from 'react';
 import {
-	Platform,
 	StyleSheet,
 	Text,
 	View,
@@ -38,21 +41,21 @@ import {
 import Picker from '@gregfrench/react-native-wheel-picker'
 var PickerItem = Picker.Item;
 
-export default class App extends Component<{}> {
+export default class WheelPicker extends Component<{}> {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			selectedItem : 2,
-			itemList: ['刘备', '张飞', '关羽', '赵云', '黄忠', '马超', '魏延', '诸葛亮']
-		};
-	}
-
-	onPickerSelect (index) {
-		this.setState({
-			selectedItem: index,
-		})
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedItem : 2,
+      itemList: ['Item 1', 'Item 2', 'Itme 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8']
+    };
+  }
+  
+  onPickerSelect (index) {
+    this.setState({
+      selectedItem: index,
+    });
+  }
 
 	onAddItem = () => {
 		var name = '司马懿'
@@ -64,12 +67,9 @@ export default class App extends Component<{}> {
 		})
 	}
 
-	render () {
-		return (
-			<View style={styles.container}>
-				<Text style={styles.welcome}>
-					Welcome to React Native!
-				</Text>
+  render () {
+    return (
+			<View>
 				<Picker style={{width: 150, height: 180}}
 					selectedValue={this.state.selectedItem}
 					itemStyle={{color:"white", fontSize:26}}
@@ -79,35 +79,15 @@ export default class App extends Component<{}> {
 						))}
 				</Picker>
 				<Text style={{margin: 20, color: '#ffffff'}}>
-					你最喜欢的是：{this.state.itemList[this.state.selectedItem]}
+          Selected item: {this.state.itemList[this.state.selectedItem]}
 				</Text>
 
 				<Text style={{margin: 20, color: '#ffffff'}}
-						onPress={this.onAddItem}>
-			怎么没有司马懿？
+					onPress={this.onAddItem}>
+          Add item
 				</Text>
 			</View>
 		);
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#1962dd',
-	},
-	welcome: {
-		fontSize: 20,
-		textAlign: 'center',
-		margin: 10,
-		color: '#ffffff',
-	},
-	instructions: {
-		textAlign: 'center',
-		color: '#333333',
-		marginBottom: 5,
-	},
-});
 ```
