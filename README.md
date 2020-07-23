@@ -29,7 +29,7 @@ react-native link @gregfrench/react-native-wheel-picker
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 
-import Picker from 'C:/xampp/htdocs/oss/projects/react-native-wheel-picker'
+import Picker from '@gregfrench/react-native-wheel-picker'
 var PickerItem = Picker.Item;
 
 const WheelPicker = () => {
@@ -44,7 +44,7 @@ const WheelPicker = () => {
           itemStyle={{color:"black", fontSize:26}}
           onValueChange={(index) => setSelectedItem(index) }>
           {itemList.map((value, i) => (
-            <PickerItem label={value} value={i} key={"money"+value}/>
+            <PickerItem label={value} value={i} key={i}/>
           ))}
         </Picker>
       </Text>
