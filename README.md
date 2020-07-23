@@ -50,7 +50,6 @@ const WheelPicker = () => {
           </Picker>
         </Text>
     </View>
-    </>
   );
 };
 
