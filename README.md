@@ -34,7 +34,7 @@ var PickerItem = Picker.Item;
 
 const WheelPicker = () => {
   const [selectedItem, setSelectedItem ] = useState(2);
-  const [itemList , setItemList ] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8']);
+  const [itemList , setItemList ] = useState(['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']);
 
   return (
     <View>
@@ -68,7 +68,7 @@ export default class WheelPicker extends Component<{}> {
     super(props);
     this.state = {
       selectedItem : 2,
-      itemList: ['Item 1', 'Item 2', 'Itme 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8']
+      itemList: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']
     };
   }
 
@@ -95,18 +95,18 @@ export default class WheelPicker extends Component<{}> {
       <View>
         <Picker style={{width: 150, height: 180}}
           selectedValue={this.state.selectedItem}
-          itemStyle={{color:"white", fontSize:26}}
+          itemStyle={{color:"black", fontSize:26}}
           onValueChange={(index) => this.onPickerSelect(index)}>
             {this.state.itemList.map((value, i) => (
-                <PickerItem label={value} value={i} key={"money"+value}/>
+                <PickerItem label={value} value={i} key={i}/>
             ))}
         </Picker>
 
-        <Text style={{margin: 20, color: '#ffffff'}}>
+        <Text style={{margin: 20}}>
           Selected item: {this.state.itemList[this.state.selectedItem]}
         </Text>
 
-        <Text style={{margin: 20, color: '#ffffff'}} onPress={this.onAddItem}>
+        <Text style={{margin: 20}} onPress={this.onAddItem}>
           Add item
         </Text>
       </View>
