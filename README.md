@@ -38,7 +38,6 @@ const WheelPicker = () => {
 
   return (
     <View>
-      <Text style={styles.sectionTitle}>Step One</Text>
       <Text style={styles.sectionDescription}>
         <Picker style={{width: 150, height: 180}}
           selectedValue={selectedItem}
@@ -47,8 +46,8 @@ const WheelPicker = () => {
           {itemList.map((value, i) => (
             <PickerItem label={value} value={i} key={"money"+value}/>
           ))}
-          </Picker>
-        </Text>
+        </Picker>
+      </Text>
     </View>
   );
 };
