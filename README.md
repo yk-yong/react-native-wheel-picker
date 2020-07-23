@@ -62,7 +62,7 @@ import { Text, View } from 'react-native';
 import Picker from '@gregfrench/react-native-wheel-picker'
 var PickerItem = Picker.Item;
 
-export default class WheelPicker extends Component<{}> {
+export default class WheelPicker extends Component {
 
   constructor(props) {
     super(props);
