@@ -41,13 +41,14 @@ const WheelPicker = () => {
       <Text style={styles.sectionTitle}>Step One</Text>
       <Text style={styles.sectionDescription}>
         <Picker style={{width: 150, height: 180}}
-        selectedValue={selectedItem}
-        itemStyle={{color:"black", fontSize:26}}
-        onValueChange={(index) => setSelectedItem(index) }>
+          selectedValue={selectedItem}
+          itemStyle={{color:"black", fontSize:26}}
+          onValueChange={(index) => setSelectedItem(index) }>
           {itemList.map((value, i) => (
             <PickerItem label={value} value={i} key={"money"+value}/>
           ))}
-      </Picker>
+          </Picker>
+        </Text>
     </View>
     </>
   );
@@ -72,7 +73,7 @@ export default class WheelPicker extends Component<{}> {
       itemList: ['Item 1', 'Item 2', 'Itme 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8']
     };
   }
-  
+
   onPickerSelect (index) {
     this.setState({
       selectedItem: index,
