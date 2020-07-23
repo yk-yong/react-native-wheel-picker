@@ -38,7 +38,7 @@ const WheelPicker = () => {
 
   return (
     <View>
-      <Text style={styles.sectionDescription}>
+      <Text>
         <Picker style={{width: 150, height: 180}}
           selectedValue={selectedItem}
           itemStyle={{color:"black", fontSize:26}}
