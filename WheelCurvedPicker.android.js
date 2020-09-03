@@ -22,6 +22,9 @@ const WheelCurvedPickerNativeInterface = {
 		onValueChange: PropTypes.func,
 		selectedValue: PropTypes.any,
 		selectedIndex: PropTypes.number,
+		lineColor: PropTypes.any,
+		lineGradientColorFrom: PropTypes.any,
+		lineGradientColorTo: PropTypes.any,
 	}
 }
 
@@ -93,6 +96,9 @@ WheelCurvedPicker.propTypes = {
 	onValueChange: PropTypes.func,
 	selectedValue: PropTypes.any,
 	selectedIndex: PropTypes.number,
+	lineColor: PropTypes.any,
+	lineGradientColorFrom: PropTypes.any,
+	lineGradientColorTo: PropTypes.any,
 }
 
 Item.propTypes = {
