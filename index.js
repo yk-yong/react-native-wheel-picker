@@ -1,11 +1,8 @@
 'use strict';
 
 import React from 'react';
-
-import {
-	PickerIOS,
-	Platform,
-} from 'react-native';
+import {PickerIOS} from '@react-native-picker/picker'
+import {Platform} from 'react-native';
 
 import WheelCurvedPicker from './WheelCurvedPicker'
 
