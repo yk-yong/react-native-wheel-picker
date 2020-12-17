@@ -37,6 +37,7 @@ export interface PickerProps extends ViewProps {
      */
     lineGradientColorTo?: ColorValue;
     onValueChange?: (itemValue: ItemValue) => void;
+    selectedIndex?: number;
     selectedValue?: ItemValue;
     style?: StyleProp<TextStyle>;
     /**
