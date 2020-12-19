@@ -1,16 +1,15 @@
 import React from "react";
 import { ColorValue, StyleProp, TextStyle, ViewProps, ViewStyle } from "react-native";
 
-export type ItemValue = number | string
 
-export interface PickerItemProps {
+export interface PickerItemProps<ItemValue> {
     label?: string;
     value: ItemValue;
     color?: ColorValue;
     testID?: string;
 }
 
-export interface PickerProps extends ViewProps {
+export interface PickerProps<ItemValue> extends ViewProps {
     /**
      * @platform android
      */
@@ -53,6 +52,6 @@ export interface PickerProps extends ViewProps {
     textSize?: number;
 }
 
-export default class Picker extends React.Component<PickerProps, {}> {
-    static Item: React.ComponentType<PickerItemProps>;
+export default class Picker<ItemValue> extends React.Component<PickerProps<ItemValue>, {}> {
+    static Item: React.ComponentType<PickerItemProps<ItemValue>>;
 }
