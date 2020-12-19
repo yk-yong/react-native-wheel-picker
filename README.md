@@ -1,6 +1,6 @@
 # React Native Wheel Picker
-[![npm version](http://img.shields.io/npm/v/react-native-wheel-picker.svg?style=flat-square)](https://www.npmjs.com/package/@gregfrench/react-native-wheel-picker "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-native-wheel-picker.svg?style=flat-square)](https://www.npmjs.com/package/@gregfrench/react-native-wheel-picker "View this project on npm")
+[![npm version](http://img.shields.io/npm/v/@gregfrench/react-native-wheel-picker.svg?style=flat-square)](https://www.npmjs.com/package/@gregfrench/react-native-wheel-picker "View this project on npm")
+[![npm version](http://img.shields.io/npm/dm/@gregfrench/react-native-wheel-picker.svg?style=flat-square)](https://www.npmjs.com/package/@gregfrench/react-native-wheel-picker "View this project on npm")
 
 ## Introduction
 Cross platform Picker component based on React-native.
